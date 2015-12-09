@@ -1,2 +1,2 @@
-# html5-sass-template
-This is a simple boilerplate used by me, nothing fancy.
+# grunt-html-starter
+This is a simple starter kit for html pages.
