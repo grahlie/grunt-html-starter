@@ -1,0 +1,32 @@
+$font-size: 16px;
+$line-height: 24px;
+$font: 'Montserrat', sans-serif;
+
+$h1-font-size: 2    * $font-size;
+$h2-font-size: 1.5  * $font-size;
+$h3-font-size: 1.17 * $font-size;
+$h4-font-size: 1    * $font-size;
+$h5-font-size: 0.83 * $font-size;
+$h6-font-size: 0.67 * $font-size;
+
+// STANDARD
+$bg-color: #fff;
+$border-color: #f9f9f9;
+$text-color: #575757;
+
+// THEME SPECIFIC
+$primary-color: #006DE8;
+$green: #00FFB8;
+$cyan: #00E7E8;
+$light-blue: #0CBEFF;
+$dark-blue: #004C9E;
+
+// MESSAGE COLORS
+$success-color: #0AA84A;
+$success-shade-color: #06692E;
+$danger-color: #F5665D;
+$danger-shade-color: #B5372F;
+
+// LINK COLORS
+$link-color: $primary-color;
+$link-color-bg: #fff;

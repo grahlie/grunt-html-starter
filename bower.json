@@ -1,0 +1,19 @@
+{
+  "name": "html5-sass-template",
+  "description": "Boilerplate with most needed grunt libraries.",
+  "main": "",
+  "authors": [
+    "name": "Mathias Grahl",
+    "email": "mathias@grahlie.se"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/grahlie/html5-sass-template",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

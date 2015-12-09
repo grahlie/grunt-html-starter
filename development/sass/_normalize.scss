@@ -1,0 +1,97 @@
+$indent-amount: 40px;
+@if not $strict-normalize or support-legacy-browser(ie, "7") {
+	dl,ol,ul {
+		@include output-rhythm(margin, rhythm(1) 0);
+	}
+	@if not $strict-normalize {
+			ol,ul {
+			ol,ul {
+			margin: 0;
+			}
+		}
+	}
+	ol,ul {
+		padding: 0 0 0 $indent-amount;
+	}
+}
+@if support-legacy-browser(ie, "7") {
+	nav ul,nav ol {
+		list-style: none;
+		list-style-image: none;
+	}
+}
+
+@if support-legacy-browser(ie, "10") {
+	img {
+		border: 0;
+		@if support-legacy-browser(ie, "7") {
+			-ms-interpolation-mode: bicubic;
+		}
+	}
+}
+
+hr {
+  @include box-sizing(content-box);
+  height: 0;
+}
+
+@if support-legacy-browser(ie, "7") {
+	form {
+		margin: 0;
+	}
+}
+
+button,input,select,textarea {
+	color: inherit;
+	font: inherit;
+	margin: 0;
+	@if support-legacy-browser(ie, "7") {
+		*font-family: $base-font-family;
+		*vertical-align: middle;
+	}
+}
+
+@if support-legacy-browser(ie, "10") {
+	input[type="checkbox"],input[type="radio"] {
+		@include box-sizing(border-box);
+		padding: 0;
+		@if support-legacy-browser(ie, "7") {
+			*height: 13px;
+			*width: 13px;
+		}
+	}
+}
+
+article,aside,footer,header,main,nav,section {
+	display: block;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+pre {
+  overflow: auto;
+}
+code,kbd,pre,samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button {
+  overflow: visible;
+}
+button,select {
+  text-transform: none;
+}
+button::-moz-focus-inner,input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+}
