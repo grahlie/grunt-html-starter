@@ -1,3 +1,6 @@
+// Information about URL for page
+var name = 'YOUR NAME HERE';
+
 module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -41,11 +44,11 @@ module.exports = function(grunt) {
 		criticalcss: {
 			home: {
 				options: {
-					url: "http://localhost/html5-sass-template/index.php",
+					url: "http://dev." + name + ".se/index.php",
 					width: 1200,
 					height: 900,
 					outputfile: "critical/critical.css",
-					filename: "build/style.css",
+					filename: "build/css/style.css",
 					buffer: 800*1024,
 					ignoreConsole: false
 				}
@@ -78,7 +81,8 @@ module.exports = function(grunt) {
           collapseWhitespace: true
         },
         files: {
-          'development/*.html': 'build/*.html'
+          'development/*.html': 'build/*.html',
+          'development/*.php': 'build/*.php'
         }
       }
     },
@@ -143,15 +147,13 @@ module.exports = function(grunt) {
     },
     // Updates all browsers
     browserSync: {
-      bsFiles: {
-        src : ['build/*.html', 'build/*.php', 'build/*.css']
-      },
-      options: {
-        server: {
+      default_options: {
+        bsFiles: {
+          src : ['build/*.html', 'build/*.php', 'build/*.css', 'build/**/*.js']
+        },
+        options: {
           watchTask: true,
-          server: {
-            baseDir: "./build"
-          }
+          proxy: "dev." + name + ".se/build"
         }
       }
     }
@@ -171,7 +173,7 @@ module.exports = function(grunt) {
 
 
   // GRUNT TRIGGERS
-  grunt.registerTask('dev', ['clean', 'jshint', 'copy:dev', 'uglify:dev', 'sass:dev', 'autoprefixer', 'watch']);
+  grunt.registerTask('dev', ['clean', 'jshint', 'copy:dev', 'uglify:dev', 'sass:dev', 'autoprefixer', 'browserSync', 'watch']);
   grunt.registerTask('production', ['clean', 'jshint', 'htmlmin', 'uglify:production', 'sass:production', 'autoprefixer', 'watch']);
   grunt.registerTask('css', ['criticalcss']);
 

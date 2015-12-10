@@ -24,7 +24,7 @@
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script src="js/scripts.js"></script>
+	<script src="js/scripts.min.js"></script>
 	<script>
 		var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']]; // Tracking code here
 		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];

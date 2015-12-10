@@ -1,6 +1,7 @@
 $font-size: 16px;
 $line-height: 24px;
 $font: 'Montserrat', sans-serif;
+$h-font: sans-serif;
 
 $h1-font-size: 2    * $font-size;
 $h2-font-size: 1.5  * $font-size;
@@ -8,6 +9,11 @@ $h3-font-size: 1.17 * $font-size;
 $h4-font-size: 1    * $font-size;
 $h5-font-size: 0.83 * $font-size;
 $h6-font-size: 0.67 * $font-size;
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $h-font;
+  font-weight: bold;
+}
 
 // STANDARD
 $bg-color: #fff;
@@ -29,4 +35,4 @@ $danger-shade-color: #B5372F;
 
 // LINK COLORS
 $link-color: $primary-color;
-$link-color-bg: #fff;
+$link-color-bg: $bg-color;
